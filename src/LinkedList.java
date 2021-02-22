@@ -38,6 +38,36 @@ public class LinkedList {
 		temp.next = newNode;
 	}
 	
+	
+	//delete node for first occurence of key
+	public void deleteNode(int key) {
+		if(head==null) {
+			System.out.println("Empty list");
+			return;
+		}
+		
+		Node temp=head, prev = head;
+		
+		//key is present at head
+		if(temp.data==key) {
+			head = temp.next;
+			temp.next = null;
+			return;
+		}
+		
+		while(temp!=null && temp.data!=key) {
+			prev = temp;
+			temp = temp.next;
+		}
+		
+		if(temp==null) {
+			System.out.println("key not present in list");
+			return;
+		}
+		
+		prev.next = temp.next;
+	}
+	
 	// insert a node after given node
 	
 	public void insertAfter(Node prevNode, int data) {

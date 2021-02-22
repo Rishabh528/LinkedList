@@ -23,6 +23,16 @@ public class Runner {
   
         System.out.println("\nCreated Linked list is: "); 
         llist.printList();
+        
+        llist.deleteNode(4);
+        System.out.println("\nCreated Linked list is: "); 
+        llist.printList();
+        
+        llist.deleteNode(1);
+        System.out.println("\nCreated Linked list is: "); 
+        llist.printList();
+        
+        llist.deleteNode(10);
 		
 	}
 
