@@ -1,3 +1,4 @@
+import java.util.HashSet;
 
 public class LinkedList {
 	
@@ -84,6 +85,28 @@ public class LinkedList {
 		
 		newNode.next = temp.next;
 		temp.next = newNode;
+	}
+	
+	
+	//remove duplicates from linked list using hashset O(n) space O(n)
+	public void removeDuplicates() {
+		if(head==null) {
+			System.out.println("List is empty");
+			return;
+		}
+		
+		Node curr=head,prev=head;
+		HashSet<Integer> buffer = new HashSet<>();
+		while(curr!=null) {
+			if(buffer.contains(curr.data)) {
+				prev.next = curr.next;
+				curr = curr.next;
+			}else {
+				buffer.add(curr.data);
+				prev=curr;
+				curr=curr.next;
+			}
+		}
 	}
 	
 }

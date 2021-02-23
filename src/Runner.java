@@ -21,19 +21,30 @@ public class Runner {
         // 1->7->8->6->4->NUllist 
         llist.insertAfter(llist.head.next, 8); 
   
+//        System.out.println("\nCreated Linked list is: "); 
+//        llist.printList();
+//        
+//        llist.deleteNode(4);
+//        System.out.println("\nCreated Linked list is: "); 
+//        llist.printList();
+//        
+//        llist.deleteNode(1);
+//        System.out.println("\nCreated Linked list is: "); 
+//        llist.printList();
+//        
+//        llist.deleteNode(10);
+        
+        llist.push(6);
+        llist.push(1);
+        llist.push(7);
+        llist.push(8);
         System.out.println("\nCreated Linked list is: "); 
         llist.printList();
         
-        llist.deleteNode(4);
+        llist.removeDuplicates();
         System.out.println("\nCreated Linked list is: "); 
         llist.printList();
         
-        llist.deleteNode(1);
-        System.out.println("\nCreated Linked list is: "); 
-        llist.printList();
-        
-        llist.deleteNode(10);
-		
 	}
 
 }
